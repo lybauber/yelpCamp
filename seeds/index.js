@@ -25,6 +25,7 @@ const seedDB = async () => {
         const random1000 = Math.floor(Math.random() * 1000);
         const price = Math.floor(Math.random() * 20) + 10;
         const camp = new Campground({
+            author: '65cd76b26dd3c6e0c80cdb98',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
             image: "https://unsplash.com/es/fotos/hombre-sentado-en-la-piedra-al-lado-de-la-tienda-de-campana-blanca-mzZVGFfMOkA",
