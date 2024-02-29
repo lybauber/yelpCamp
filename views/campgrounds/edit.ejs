@@ -20,7 +20,7 @@
     <div class="row">
         <h1 class="text-center">Edit Campground</h1>
         <div class="col-6 offset-3">
-            <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST" novalidate class="validated-form">
+            <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data" >
                 <div class="mb-3">
                     <label class="form-label" for="title">Title</label>
                     <input  class="form-control" type="text" name="campground[title]" required  id="title" value="<%=campground.title %>">
@@ -35,13 +35,7 @@
                         Looks good
                     </div>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label" for="image">Image Url</label>
-                    <input  class="form-control" type="text" name="campground[image]" required id="image" value="<%=campground.image %>">
-                    <div class="valid-feedback">
-                        Looks good
-                    </div>
-                </div>
+                
                 <div class="mb-3">
                     <label class="form-label" for="price">Campground Price</label>
                     <div class="input-group ">
@@ -58,6 +52,14 @@
                     <label class="form-label" for="description">Description</label>
                     <textarea  class="form-control" type="text" name="campground[description]" required id="description"><%=campground.description %></textarea>
                 </div>
+                
+                
+                <div class="input-group mb-3">
+                  
+                    <input type="file" class="form-control" id="image" name="image" placeholder="Recipient's username" aria-label="Add more images" aria-describedby="basic-addon2" multiple>
+                </div>
+                
+
                 <div class="mb-3">
                     <button class="btn btn-info">Update Campground</button>
                 </div>

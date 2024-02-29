@@ -1,3 +1,11 @@
+import dotenv from "dotenv";
+
+if(process.env.NODE_ENV !== 'production'){
+    dotenv.config();
+}
+
+
+
 import express from "express";
 import {fileURLToPath} from 'url';
 import {dirname} from 'path';
@@ -15,6 +23,7 @@ import { campgroundsRouter } from "./routes/campgrounds.js";
 import { reviewsRouter } from "./routes/reviews.js";
 import { userRouter } from "./routes/users.js";
 import userModel from "./models/user.js";
+import { Console } from "console";
 
 
 const __filename = fileURLToPath(import.meta.url);

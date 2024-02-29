@@ -28,9 +28,18 @@ const seedDB = async () => {
             author: '65cd76b26dd3c6e0c80cdb98',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
-            image: "https://unsplash.com/es/fotos/hombre-sentado-en-la-piedra-al-lado-de-la-tienda-de-campana-blanca-mzZVGFfMOkA",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quod.",
-            price: price
+            price: price,
+            images: [
+                {
+                url:'https://res.cloudinary.com/dff1gcvzu/image/upload/v1709165272/YelpCamp/poesrbz6pzr5muzycmg6.jpg',
+                filename: 'YelpCamp/poesrbz6pzr5muzycmg6'
+                },
+                {
+                url: 'https://res.cloudinary.com/dff1gcvzu/image/upload/v1709164197/YelpCamp/ueq981tmoixxegprlxnz.jpg',
+                filename:'YelpCamp/ueq981tmoixxegprlxnz'
+                }
+            ]
         })
         await camp.save();
     }
